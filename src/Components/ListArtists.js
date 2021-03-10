@@ -74,7 +74,7 @@ function ListArtists() {
         ></path>
       </svg>
       <h1
-        className="text-center"
+        className="text-center mt-5"
         style={{ fontWeight: "900", color: "#212f57" }}
       >
         Artsy Artists

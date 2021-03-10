@@ -20,6 +20,12 @@ function ArtistProfile(props) {
           <Link to="/" className="btn btn-primary mt-3">
             Back to list
           </Link>
+          <h1
+            className="text-center mt-5"
+            style={{ fontWeight: "900", color: "#212f57" }}
+          >
+           Artist Profile
+          </h1>
           <div className="main-body mt-5">
             <div className="row gutters-sm">
               <div className="col-md-4 mb-3">
@@ -160,7 +166,7 @@ function ArtistProfile(props) {
                   </ul>
                 </div>
               </div>
-              {console.log(artist)}
+
               <div className="col-md-8">
                 <div className="card mb-3">
                   <div className="card-body">
