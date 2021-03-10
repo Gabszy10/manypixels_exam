@@ -88,7 +88,6 @@ function ListArtists() {
             <th></th>
             <th>Name</th>
             <th>Nationality</th>
-            <th>Birthday Year</th>
           </tr>
         </thead>
         <tbody>
@@ -100,10 +99,9 @@ function ListArtists() {
                   <img className="img-fluid" src={artist.image.url} alt="dw" />
                 </td>
                 <td>
-                  <Link to={`/profile/${artist.id}`}>{artist.name}</Link>
+                  <Link to={`/profile/${artist.id}`} style={{fontSize:'0.8em'}}>{artist.name}</Link>
                 </td>
                 <td>{artist.nationality}</td>
-                <td>{artist.birthday ? artist.birthday : "N/A"}</td>
               </tr>
             );
           })}
