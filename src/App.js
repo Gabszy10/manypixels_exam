@@ -8,8 +8,8 @@ import {
   from,
 } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
-import ListArtists from "./Components/ListArtists";
-import ArtistProfile from "./Components/ArtistProfile";
+import Profile from "./Views/Profile";
+import Home from "./Views/Home";
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
   if (graphqlErrors) {
@@ -36,10 +36,10 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
-            <ListArtists />
+            <Home />
           </Route>
           <Route path="/profile/:id" exact>
-            <ArtistProfile />
+            <Profile />
           </Route>
         </Switch>
       </BrowserRouter>

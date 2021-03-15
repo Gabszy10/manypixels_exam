@@ -16,6 +16,7 @@ export const LOAD_ARTISTS = gql`
         }
         sortable_id
         artworks {
+          id
           title
           artist {
             #  Enough information on an Artist to show the metadata
@@ -39,10 +40,38 @@ export const LOAD_ARTISTS = gql`
 `;
 
 export const GET_ARTIST_ACCOUNT = gql`
-  query {
-    me {
+  query($id: String!) {
+    artist(id: $id) {
+      id
+      _id
       name
-      email
+      years
+      bio
+      birthday
+      nationality
+      image {
+        url
+      }
+      sortable_id
+      artworks {
+        id
+        title
+        artist {
+          #  Enough information on an Artist to show the metadata
+          id
+          _id
+          name
+          years
+          birthday
+          nationality
+          blurb
+          # A preview image for the artist if we'll need it
+          image {
+            url
+          }
+          sortable_id
+        }
+      }
     }
   }
 `;
